@@ -2,18 +2,7 @@
 pragma solidity ^0.8.0;
 
 contract HelloWorld {dff
-    uint256 public storedInteger;
-    mapping(address => uint256) public balanceOf;
-
-    event Transfer(address indexed from, address indexed to, uint256 value);
-
-    function increment() public {
-        storedInteger += 1;
-    }
-
-    function mint(address _to, uint256 _amount) public {
-        balanceOf[_to] += _amount;
-    }
+    uint256 public storedInteger;g
 
     function transferTokens(address _from, address _to, uint256 _amount) public {
         require(balanceOf[_from] >= _amount, "Insufficient balance");
